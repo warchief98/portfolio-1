@@ -1,12 +1,49 @@
+.main-btn,
+.btn-1 {
+    width: 245px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid green;
+    background-color: yellowgreen;
+}
+
+.secondary-btn,
+.btn-2 {
+    width: 245px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid green;
+    background-color: #3256cd;
+}
+
+nav {
+    border: 2px solid yellowgreen;
+}
+
 nav ul {
-  margin: 0;
-  padding: 6px;
-  list-style: none; }
+    list-style-type: none;
+}
 
-nav li {
-  display: inline-block; }
+nav ul li {
+    padding: 20px 15px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
 
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none; }
+nav ul li:hover {
+    background-color: green !important;
+}
+
+nav ul li:first-child {
+    background-color: red;
+    font-size: 50px;
+    font-weight: bold;
+    color: purple;
+}
+
+nav ul li:last-child {
+    background-color: blue;
+}
+
+
+/*# sourceMappingURL=styles.css.map */
