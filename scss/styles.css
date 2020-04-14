@@ -7,13 +7,20 @@
   position: fixed;
   top: 20px;
   left: 0;
+  direction: rtl;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .hello-left {
   background-color: #ff5851;
+  -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+  transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
 
 .hello-right {
   background-color: #f8f8f8;
+  -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+  transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
 /*# sourceMappingURL=styles.css.map */

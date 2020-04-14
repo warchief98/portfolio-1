@@ -5,18 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- sass and css import -->
     <link rel="stylesheet" href="scss/styles.css">
+
+    <!-- personal framework import -->
     <link rel="stylesheet" href="scss/A-Mohseni-framework-v1.1.css">
+
+    <!-- bootstrap import -->
+    <link rel="stylesheet" href="BootsTrap/bootstrap.min.css">
+    <link rel="stylesheet" href="BootsTrap/bootstrap.min.css.map">
+    <link rel="stylesheet" href="BootsTrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="BootsTrap/bootstrap-grid.min.css.map">
+
+    <!-- jquery import -->
+    <script src="js/iquery.js"></script>
 </head>
 
 <body>
     <!--_____________________________________________ main wrapper -->
     <div class="wrapper pd-d-20">
         <div class="hello-block w95 df">
-            <div class="hello-left clmn-50">1</div>
             <div class="hello-right clmn-50">2</div>
+            <div class="hello-left clmn-50">1</div>
         </div>
     </div>
+
+    <!-- js -->
+    <script>
+        $(document).scroll(function() {
+            _h = $(this).scrollTop();
+            console.log(_h);
+            if (_h > 350) {
+                $('.hello-right').css('width', '0%');
+                $('.hello-left').css('width', '100%');
+            }
+            if (_h > 700) {
+                $('.hello-block').css('top', '-100px')
+            }
+            if (_h < 350) {
+                $('.hello-right').css('width', '50%');
+                $('.hello-left').css('width', '50%');
+            }
+            if (_h < 700) {
+                $('.hello-block').css('top', '20px')
+            }
+        })
+    </script>
 </body>
 
 </html>
