@@ -1,29 +1,20 @@
 @import "colors";
-nav {
-    border: 2px solid yellowgreen;
-    ul {
-        list-style-type: none;
-        li {
-            padding: 20px 15px;
-            transition: 0.2s;
-            &:hover {
-                background-color: $color-2 !important;
-            }
-        }
-        li:first-child {
-            background-color: $color-1;
-            @include imp-text;
-        }
-        li:last-child {
-            background-color: $color-3;
-        }
-    }
+@import "mixin";
+.wrapper {
+    height: 1000vh;
+    @include border (5px, red)
 }
 
-.btn-1 {
-    @extend .main-btn;
+.hello-block {
+    position: fixed;
+    top: 20px;
+    left: 0;
 }
 
-.btn-2 {
-    @extend .secondary-btn;
+.hello-left {
+    background-color: $color-1;
+}
+
+.hello-right {
+    background-color: $color-2;
 }

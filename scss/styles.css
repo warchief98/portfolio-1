@@ -1,49 +1,19 @@
-.main-btn,
-.btn-1 {
-    width: 245px;
-    height: 45px;
-    border-radius: 15px;
-    border: 2px solid green;
-    background-color: yellowgreen;
+.wrapper {
+  height: 1000vh;
+  border: 5px solid red;
 }
 
-.secondary-btn,
-.btn-2 {
-    width: 245px;
-    height: 45px;
-    border-radius: 15px;
-    border: 2px solid green;
-    background-color: #3256cd;
+.hello-block {
+  position: fixed;
+  top: 20px;
+  left: 0;
 }
 
-nav {
-    border: 2px solid yellowgreen;
+.hello-left {
+  background-color: #ff5851;
 }
 
-nav ul {
-    list-style-type: none;
+.hello-right {
+  background-color: #f8f8f8;
 }
-
-nav ul li {
-    padding: 20px 15px;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-}
-
-nav ul li:hover {
-    background-color: green !important;
-}
-
-nav ul li:first-child {
-    background-color: red;
-    font-size: 50px;
-    font-weight: bold;
-    color: purple;
-}
-
-nav ul li:last-child {
-    background-color: blue;
-}
-
-
 /*# sourceMappingURL=styles.css.map */

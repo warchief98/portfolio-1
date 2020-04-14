@@ -1,24 +1,2 @@
-$color-1:red;
-$color-2:green;
-$color-3:blue;
-@mixin imp-text {
-    font-size: 50px;
-    font-weight: bold;
-    color: purple;
-}
-
-.main-btn {
-    width: 245px;
-    height: 45px;
-    border-radius: 15px;
-    border: 2px solid green;
-    background-color: yellowgreen;
-}
-
-.secondary-btn {
-    width: 245px;
-    height: 45px;
-    border-radius: 15px;
-    border: 2px solid green;
-    background-color: rgb(50, 86, 205);
-}
+$color-1 :#ff5851;
+$color-2:#f8f8f8;
