@@ -112,6 +112,10 @@ input:active {
     display: flex;
 }
 
+.al-items-end {
+    align-items: flex-end;
+}
+
 .w100 {
     width: 100%;
 }

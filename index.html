@@ -24,11 +24,23 @@
 
 <body>
     <!--_____________________________________________ main wrapper -->
-    <div class="wrapper pd-d-20">
-        <div class="hello-block w95 df">
+    <div class="wrapper">
+        <div class="hello-block df">
             <div class="hello-right clmn-50">2</div>
             <div class="hello-left clmn-50">1</div>
+            <div class="hello-text df">
+                <span class="red-span"></span>
+                <div>he </br> llo</div>
+            </div>
         </div>
+        <div class="inside-wrapper">
+            <div class="invis-bg"></div>
+            <div class="invis-bg"></div>
+            <div class="invis-bg"></div>
+            <div class="invis-bg"></div>
+            <div class="block-1"></div>
+        </div>
+
     </div>
 
     <!-- js -->
@@ -39,16 +51,18 @@
             if (_h > 350) {
                 $('.hello-right').css('width', '0%');
                 $('.hello-left').css('width', '100%');
+                $('.hello-text').addClass('text-go');
             }
             if (_h > 700) {
-                $('.hello-block').css('top', '-100px')
+
             }
             if (_h < 350) {
                 $('.hello-right').css('width', '50%');
                 $('.hello-left').css('width', '50%');
+                $('.hello-text').removeClass('text-go');
             }
             if (_h < 700) {
-                $('.hello-block').css('top', '20px')
+
             }
         })
     </script>

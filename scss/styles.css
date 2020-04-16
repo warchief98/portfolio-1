@@ -1,15 +1,22 @@
-.wrapper {
-  height: 1000vh;
-  border: 5px solid red;
+.inside-wrapper {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  border: 5px solid blue;
+  width: calc(100% - 80px);
 }
 
 .hello-block {
   position: fixed;
-  top: 20px;
+  top: 40px;
   left: 0;
   direction: rtl;
   -webkit-transition: 1.5s;
   transition: 1.5s;
+  margin-left: 40px;
+  width: calc(100% - 80px);
+  height: calc(100vh - 80px);
+  overflow: hidden;
 }
 
 .hello-left {
@@ -22,5 +29,46 @@
   background-color: #f8f8f8;
   -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+}
+
+.hello-text {
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.text-go {
+  top: 50%;
+  left: 100%;
+}
+
+.red-span {
+  background-color: #ff5851;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: -50%;
+  bottom: 14px;
+}
+
+.block-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.invis-bg {
+  background-color: transparent;
+  width: 100%;
+  height: 50vh;
 }
 /*# sourceMappingURL=styles.css.map */
