@@ -68,7 +68,7 @@
 
 .invis-bg {
   background-color: transparent;
-  width: 100%;
+  width: 0;
   height: 50vh;
 }
 /*# sourceMappingURL=styles.css.map */
