@@ -63,6 +63,18 @@
         bottom: 14px;
     }
     
+    .hello-content {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+    }
+    
+    .zigzag {
+        width: 60px;
+        height: 60px;
+    }
+    
     // ___________________________________block-1____________________________
     .block-1 {
         width: 100%;
