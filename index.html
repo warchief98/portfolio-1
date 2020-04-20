@@ -33,15 +33,16 @@
                 <div>he </br> llo</div>
             </div>
             <div class="hello-content">
-                <div>
-                    <img src="image/icon/zigzag.png" alt="" class="zigzag">
 
-
-
+                <!-- ____________________________________zigzag line -->
+                <div class="zigzag">
+                    <img src="image/icon/zigzag.png" alt="">
+                    <p class="zigzag-content">zigzag test</p>
                 </div>
-                <p></p>
-                <p></p>
-                <p></p>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
         <div class="inside-wrapper">
@@ -49,7 +50,8 @@
             <div class="invis-bg"></div>
             <div class="invis-bg"></div>
             <div class="invis-bg"></div>
-            <div class="block-1"></div>
+            <div class="block-1">
+            </div>
         </div>
 
     </div>
@@ -63,6 +65,9 @@
                 $('.hello-right').css('width', '0%');
                 $('.hello-left').css('width', '100%');
                 $('.hello-text').addClass('text-go');
+                $('.zigzag>p').addClass("zigzag-go");
+                $('.hello-content>p').addClass('hello-content-go')
+
             }
             if (_h > 700) {
 
@@ -71,6 +76,8 @@
                 $('.hello-right').css('width', '50%');
                 $('.hello-left').css('width', '50%');
                 $('.hello-text').removeClass('text-go');
+                $('.zigzag>p').removeClass("zigzag-go");
+                $('.hello-content>p').removeClass('hello-content-go')
             }
             if (_h < 700) {
 

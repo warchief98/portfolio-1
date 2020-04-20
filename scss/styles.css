@@ -2,7 +2,6 @@
   position: absolute;
   top: 0;
   left: 40px;
-  border: 5px solid blue;
   width: calc(100% - 80px);
 }
 
@@ -32,7 +31,7 @@
 }
 
 .hello-text {
-  font-size: 50px;
+  font-size: 100px;
   font-weight: bold;
   position: absolute;
   top: 50%;
@@ -66,11 +65,64 @@
   left: 100px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  width: 200px;
+  text-align: left;
+  overflow: hidden;
 }
 
-.zigzag {
-  width: 60px;
-  height: 60px;
+.hello-content p {
+  -webkit-transform: translateY(250px);
+          transform: translateY(250px);
+}
+
+.hello-content p:nth-of-type(1) {
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.hello-content p:nth-of-type(2) {
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.hello-content p:nth-of-type(3) {
+  -webkit-transition: 0.7s ease-out;
+  transition: 0.7s ease-out;
+}
+
+.hello-content .hello-content-go {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.hello-content .zigzag {
+  position: relative;
+}
+
+.hello-content .zigzag img {
+  width: 50px;
+}
+
+.hello-content .zigzag p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  line-height: 40px;
+  background-color: #ff5851;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  color: #ff5851;
+}
+
+.hello-content .zigzag .zigzag-go {
+  -webkit-transform: translateX(70px);
+          transform: translateX(70px);
+  color: black;
 }
 
 .block-1 {
