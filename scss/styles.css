@@ -1,8 +1,25 @@
+.menu-btn-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 100px;
+  height: 50px;
+  z-index: 1000;
+  border: 1px solid black;
+}
+
+.menu-btn-container button {
+  background-color: #f8f8f8;
+}
+
 .inside-wrapper {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 40px;
   width: calc(100% - 80px);
+  overflow: hidden;
 }
 
 .hello-block {
@@ -18,16 +35,20 @@
   overflow: hidden;
 }
 
-.hello-left {
+.hello-block .hello-left {
   background-color: #ff5851;
   -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
 
-.hello-right {
+.hello-block .hello-right {
   background-color: #f8f8f8;
   -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+}
+
+.hello-block .hello-width {
+  width: 43%;
 }
 
 .hello-text {

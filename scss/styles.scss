@@ -6,12 +6,27 @@
         //     position: relative;
     }
     
+    .menu-btn-container {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 100px;
+        height: 50px;
+        z-index: 1000;
+        @include border(1px, black);
+        button {
+            background-color: $color-2;
+        }
+    }
+    
     .inside-wrapper {
         position: absolute;
-        top: 0;
+        top: 40px;
         left: 40px;
         // @include border(5px, blue);
         width: calc(100% - 80px);
+        overflow: hidden;
     }
     
     .hello-block {
@@ -24,17 +39,18 @@
         width: calc(100% - 80px);
         height: calc(100vh - 80px);
         overflow: hidden;
-    }
-    
-    .hello-left {
-        background-color: $color-1;
-        // background: url(../image/asset/1.jpg) no-repeat center center/cover;
-        transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
-    }
-    
-    .hello-right {
-        background-color: $color-2;
-        transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+        .hello-left {
+            background-color: $color-1;
+            // background: url(../image/asset/1.jpg) no-repeat center center/cover;
+            transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+        }
+        .hello-right {
+            background-color: $color-2;
+            transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
+        }
+        .hello-width {
+            width: 43%;
+        }
     }
     
     .hello-text {

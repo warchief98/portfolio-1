@@ -23,9 +23,16 @@
 </head>
 
 <body>
+    <!-- ______________________________menu btn -->
+    <div class="menu-btn-container">
+        <button>MENU</button>
+    </div>
     <!--_____________________________________________ main wrapper -->
     <div class="wrapper">
         <div class="hello-block df">
+
+
+
             <div class="hello-right clmn-50">2</div>
             <div class="hello-left clmn-50">1</div>
             <div class="hello-text df">
@@ -83,6 +90,14 @@
 
             }
         })
+
+
+        // menu btn functions
+        $(".menu-btn-container").hover(function() {
+            $(".hello-left").addClass('hello-width');
+        }, function() {
+            $(".hello-left").removeClass('hello-width');
+        });
     </script>
 </body>
 
