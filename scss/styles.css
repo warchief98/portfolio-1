@@ -14,25 +14,101 @@
   background-color: #f8f8f8;
 }
 
+.side-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  z-index: 999;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.side-menu .side-menu-content {
+  background-color: white;
+  width: calc(100% - 20vw);
+  height: 100%;
+  position: relative;
+}
+
+.side-menu .side-menu-content .side-menu-links {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 150px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid black;
+}
+
+.side-menu .menu-red-part {
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 10%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.side-menu .menu-red-part .bg-white {
+  height: 15vh;
+  background-color: white;
+  opacity: 1;
+}
+
+.side-menu .menu-red-part .bg-red {
+  height: 70vh;
+  background-color: #ff5851;
+  opacity: 0.7;
+}
+
+.side-menu .menu-red-part-go {
+  left: 80%;
+  width: 20vw;
+}
+
+.side-menu-go {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.body-overflow {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .inside-wrapper {
   position: absolute;
   top: 40px;
-  left: 40px;
+  right: 40px;
   width: calc(100% - 80px);
   overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .hello-block {
   position: fixed;
   top: 40px;
-  left: 0;
+  right: 0;
   direction: rtl;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  margin-left: 40px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-right: 40px;
   width: calc(100% - 80px);
   height: calc(100vh - 80px);
   overflow: hidden;
+  border: 1px solid black;
 }
 
 .hello-block .hello-left {
@@ -47,8 +123,8 @@
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
 
-.hello-block .hello-width {
-  width: 43%;
+.hello-width {
+  width: calc(90% - 80px) !important;
 }
 
 .hello-text {
