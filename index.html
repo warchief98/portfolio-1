@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <!-- sass and css import -->
+    <link rel="stylesheet" href="scss/slider.css">
     <link rel="stylesheet" href="scss/styles.css">
 
     <!-- personal framework import -->
@@ -32,20 +33,22 @@
         <div class="side-menu-content">
             <div class="side-menu-links">
 
-                <div class="side-link">
-                    <a href="#">The agency</a>
-                </div>
+                <div class="side-link-container">
+                    <div class="side-link">
+                        <a href="#">The agency</a>
+                    </div>
 
-                <div class="side-link">
-                    <a href="#">The agency2</a>
-                </div>
+                    <div class="side-link">
+                        <a href="#">The agency2</a>
+                    </div>
 
-                <div class="side-link">
-                    <a href="#">The agency3</a>
-                </div>
+                    <div class="side-link">
+                        <a href="#">The agency3</a>
+                    </div>
 
-                <div class="side-link">
-                    <a href="#">The agency4</a>
+                    <div class="side-link">
+                        <a href="#">The agency4</a>
+                    </div>
                 </div>
 
                 <div class="menu-contact">
@@ -96,7 +99,28 @@
             <div class="invis-bg"></div>
             <div class="invis-bg"></div>
             <div class="invis-bg"></div>
-            <div class="block-1">
+            <div class="main-slider container-fluid p-0">
+
+                <!-- ******************************* -->
+                <div class="slider-container">
+                    <div class="slide slide-1">
+
+                    </div>
+
+                    <div class="slide slide-2">
+
+                    </div>
+
+                    <div class="slide slide-3">
+
+                    </div>
+
+                    <div class="slide slide-4">
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
@@ -112,6 +136,7 @@
                 $('.hello-left').css('width', '100%');
                 $('.hello-text').addClass('text-go');
                 $('.zigzag>p').addClass("zigzag-go");
+                $('.zigzag>img').css("opacity", 1);
                 $('.hello-content>p').addClass('hello-content-go')
 
             }
@@ -123,6 +148,7 @@
                 $('.hello-left').css('width', '50%');
                 $('.hello-text').removeClass('text-go');
                 $('.zigzag>p').removeClass("zigzag-go");
+                $('.zigzag>img').css("opacity", 0);
                 $('.hello-content>p').removeClass('hello-content-go')
             }
             if (_h < 700) {
@@ -144,16 +170,48 @@
         $('.menu-btn-container').click(function() {
             if (menuCounter == 1) {
                 $('.side-menu').addClass('side-menu-go');
+                $('.side-link>a').addClass('side-link-go');
+                $('.menu-contact').addClass('menu-contact-go');
+                $('.menu-brief').addClass('menu-brief-go');
+                $('.bg-red').addClass('bg-red-go');
                 $("html").addClass('body-overflow');
                 $('.menu-red-part').addClass('menu-red-part-go');
                 menuCounter--;
             } else {
                 $('.side-menu').removeClass('side-menu-go');
+                $('.side-link>a').removeClass('side-link-go');
+                $('.menu-contact').removeClass('menu-contact-go');
+                $('.menu-brief').removeClass('menu-brief-go');
+                $('.bg-red').removeClass('bg-red-go');
                 $("html").removeClass('body-overflow');
                 $('.menu-red-part').removeClass('menu-red-part-go');
                 menuCounter++
             }
         })
+
+        //        _____________________________________________JS for slider main
+        var countSlide = 0;
+        setInterval(findNextSlider, 6000);
+
+        var __l = parseInt($('.slide').length);
+
+        findNextSlider();
+
+        function findNextSlider() {
+
+            if (countSlide < __l) {
+                $('.slide').css('opacity', '0');
+                $('.slide').eq(countSlide).css('opacity', '1');
+
+                $('.slide-content').removeClass('slide-content-move');
+                $('.slide-content').eq(countSlide).addClass('slide-content-move');
+                countSlide++;
+            } else if (countSlide == __l) //make counter 0 to start over dynamically
+            {
+                countSlide = 0;
+                findNextSlider();
+            }
+        }
     </script>
 </body>
 
