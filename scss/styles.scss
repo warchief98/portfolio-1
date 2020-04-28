@@ -7,23 +7,52 @@
     }
     
     .menu-btn-container {
+        transform: translate(0, -50%) rotate(-90deg);
         position: fixed;
         top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
+        left: 35px;
         width: 35px;
         height: 70px;
         z-index: 1000;
         cursor: pointer;
-        @include border(1px, black);
-        &:hover span:nth-of-type(1) {
+        // header hover
+        &:hover header>span:nth-of-type(1) {
             height: 55%;
         }
-        &:hover span:nth-of-type(2) {
+        &:hover header>span:nth-of-type(2) {
             height: 85%;
         }
-        &:hover span:nth-of-type(3) {
+        &:hover header>span:nth-of-type(3) {
             height: 40%;
+        }
+        // footer hover
+        &:hover footer>span:nth-of-type(1) {
+            transform: translateY(-65%);
+            -webkit-transform: translateY(-65%);
+            -moz-transform: translateY(-65%);
+            -ms-transform: translateY(-65%);
+            -o-transform: translateY(-65%);
+        }
+        &:hover footer>span:nth-of-type(2) {
+            transform: translateY(-10%);
+            -webkit-transform: translateY(-10%);
+            -moz-transform: translateY(-10%);
+            -ms-transform: translateY(-10%);
+            -o-transform: translateY(-10%);
+        }
+        &:hover footer>span:nth-of-type(3) {
+            transform: translateY(-40%);
+            -webkit-transform: translateY(-40%);
+            -moz-transform: translateY(-40%);
+            -ms-transform: translateY(-40%);
+            -o-transform: translateY(-40%);
+        }
+        &:hover footer>span:nth-of-type(4) {
+            transform: translateY(-5%);
+            -webkit-transform: translateY(-5%);
+            -moz-transform: translateY(-5%);
+            -ms-transform: translateY(-5%);
+            -o-transform: translateY(-5%);
         }
         header {
             height: 50%;
@@ -57,7 +86,87 @@
         }
         footer {
             height: 50%;
-            display: ;
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: $color-3;
+            span {
+                transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transition: 0.3s ease-in-out;
+                -webkit-transition: 0.3s ease-in-out;
+                -moz-transition: 0.3s ease-in-out;
+                -ms-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+            }
+            span:nth-of-type(1) {}
+            span:nth-of-type(2) {}
+            span:nth-of-type(3) {}
+            span:nth-of-type(4) {}
+        }
+    }
+    
+    .social-container {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        z-index: 1000;
+        display: flex;
+        flex-flow: column nowrap;
+        img {
+            margin: 5px 0;
+            width: 25px;
+            height: 25px;
+        }
+    }
+    
+    .scroll-bot {
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+        display: flex;
+        width: 100px;
+        height: 35px;
+        z-index: 1000;
+        direction: rtl;
+        filter: brightness(3);
+        header {
+            color: black;
+            font-weight: bold;
+        }
+        footer {
+            img {
+                width: 70%;
+                transform: translateX(10px);
+                animation: arrow-anime 0.5s ease-in-out infinite alternate;
+            }
+            @keyframes arrow-anime {
+                from {
+                    transform: translateX(10px);
+                }
+                to {
+                    transform: translateX(-25px);
+                }
+            }
+        }
+    }
+    
+    .scroll-bot-go {
+        left: -15px !important;
+        transform: translateX(0) rotate(-90deg) !important;
+        header {
+            color: $color-3;
+        }
+        footer {
+            img {
+                filter: brightness(0);
+            }
         }
     }
     
@@ -213,7 +322,7 @@
         border-left: 1px solid silver;
         width: calc(100% - 80px);
         overflow: hidden;
-        transition: 1s;
+        transition: 0.6s;
     }
     
     .hello-block {
@@ -221,11 +330,11 @@
         top: 40px;
         right: 0;
         direction: rtl;
-        transition: 1s;
+        transition: 0.6s;
         margin-right: 40px;
         width: calc(100% - 80px);
         height: calc(100vh - 80px);
-        overflow: hidden;
+        overflow-x: hidden;
         @include border(1px, black);
         .hello-left {
             // background-color: $color-1;
@@ -239,7 +348,7 @@
     }
     
     .hello-width {
-        width: calc(90% - 80px) !important;
+        width: calc(95% - 80px) !important;
     }
     
     .hello-text {
@@ -341,14 +450,67 @@
     
     // _________________________________________intro part
     .intro-part {
+        overflow: hidden;
         width: 100%;
         background-color: white;
         @extend .bg-linear-1;
-    }
-    
-    .intro-pic {
-        background: url("../image/asset/slide-2.jpg") no-repeat center center/auto 100%;
-        @extend .thumb;
+        position: relative;
+        min-height: 350px;
+        .moving-light {
+            z-index: 2;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -100px;
+            width: 10px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.699);
+            box-shadow: 0 0 50px 20px white;
+            animation: moving-light 2.5s ease-in infinite normal;
+        }
+        @keyframes moving-light {
+            from {
+                left: -100px;
+            }
+            to {
+                left: 102%;
+            }
+        }
+        // .moving-light-2 {
+        //     @extend .moving-light;
+        //     animation: moving-light 5s ease-in-out 0.2s infinite alternate;
+        //     background-color: red;
+        //     width: 8px;
+        // }
+        // .moving-light-3 {
+        //     @extend .moving-light;
+        //     animation: moving-light 5s ease-in-out 0.4s infinite alternate;
+        //     background-color: green;
+        //     width: 6px;
+        // }
+        .intro-pic-container {
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            clip-path: polygon(0 0, 280px 0, 320px 160px, 280px 320px, 0 320px);
+            .intro-pic {
+                background: url("../image/asset/slide-2.jpg") no-repeat center center/auto 100%;
+                @extend .thumb;
+            }
+        }
+        .intro-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            width: 100%;
+            height: 320px;
+            background-color: green;
+            clip-path: polygon(310px 0, 350px 50%, 310px 100%, 100% 100%, 100% 0);
+            padding-left: 340px;
+        }
     }
     
     // ______________________________cards container
