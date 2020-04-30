@@ -1,9 +1,7 @@
     @import "colors";
     @import "mixin";
-    .wrapper {
-        //     // height: 1000vh;
-        //     @include border (5px, red);
-        //     position: relative;
+    body {
+        background-color: $color-1 !important;
     }
     
     .menu-btn-container {
@@ -15,15 +13,20 @@
         height: 70px;
         z-index: 1000;
         cursor: pointer;
+        transition: 0.2s;
+        border-radius: 4px;
         // header hover
         &:hover header>span:nth-of-type(1) {
             height: 55%;
+            background-color: rgba(255, 255, 255, 1);
         }
         &:hover header>span:nth-of-type(2) {
             height: 85%;
+            background-color: black;
         }
         &:hover header>span:nth-of-type(3) {
             height: 40%;
+            background-color: rgba(255, 255, 255, 1);
         }
         // footer hover
         &:hover footer>span:nth-of-type(1) {
@@ -32,6 +35,7 @@
             -moz-transform: translateY(-65%);
             -ms-transform: translateY(-65%);
             -o-transform: translateY(-65%);
+            color: black;
         }
         &:hover footer>span:nth-of-type(2) {
             transform: translateY(-10%);
@@ -39,6 +43,7 @@
             -moz-transform: translateY(-10%);
             -ms-transform: translateY(-10%);
             -o-transform: translateY(-10%);
+            color: rgba(255, 255, 255, 1);
         }
         &:hover footer>span:nth-of-type(3) {
             transform: translateY(-40%);
@@ -46,6 +51,7 @@
             -moz-transform: translateY(-40%);
             -ms-transform: translateY(-40%);
             -o-transform: translateY(-40%);
+            color: black;
         }
         &:hover footer>span:nth-of-type(4) {
             transform: translateY(-5%);
@@ -53,6 +59,7 @@
             -moz-transform: translateY(-5%);
             -ms-transform: translateY(-5%);
             -o-transform: translateY(-5%);
+            color: rgba(255, 255, 255, 1);
         }
         header {
             height: 50%;
@@ -79,6 +86,7 @@
             }
             span:nth-of-type(2) {
                 height: 60%;
+                background-color: #fff;
             }
             span:nth-of-type(3) {
                 height: 30%;
@@ -88,11 +96,11 @@
             height: 50%;
             display: flex;
             align-items: center;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: bold;
             color: $color-3;
-            text-shadow: 0 0 2px white;
             span {
+                margin-right: 1px;
                 transform: translateY(0);
                 -webkit-transform: translateY(0);
                 -moz-transform: translateY(0);
@@ -104,9 +112,13 @@
                 -ms-transition: 0.3s ease-in-out;
                 -o-transition: 0.3s ease-in-out;
             }
-            span:nth-of-type(1) {}
+            span:nth-of-type(1) {
+                color: white;
+            }
             span:nth-of-type(2) {}
-            span:nth-of-type(3) {}
+            span:nth-of-type(3) {
+                color: white;
+            }
             span:nth-of-type(4) {}
         }
     }
@@ -119,10 +131,19 @@
         z-index: 1000;
         display: flex;
         flex-flow: column nowrap;
-        img {
-            margin: 5px 0;
-            width: 25px;
-            height: 25px;
+        figure {
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            transition: 0.2s;
+            margin-bottom: 10px;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.493);
+            }
+            img {
+                width: 100%;
+                filter: brightness(100);
+            }
         }
     }
     
@@ -146,6 +167,7 @@
                 width: 70%;
                 transform: translateX(10px);
                 animation: arrow-anime 0.5s ease-in-out infinite alternate;
+                filter: brightness(0);
             }
             @keyframes arrow-anime {
                 from {
@@ -162,11 +184,11 @@
         left: -15px !important;
         transform: translateX(0) rotate(-90deg) !important;
         header {
-            color: $color-3;
+            color: #717171;
         }
         footer {
             img {
-                filter: brightness(0);
+                filter: brightness(2);
             }
         }
     }
@@ -319,11 +341,13 @@
         position: absolute;
         top: 40px;
         right: 40px;
-        border-right: 1px solid silver;
-        border-left: 1px solid silver;
+        // border-right: 1px solid silver;
+        // border-left: 1px solid silver;
         width: calc(100% - 80px);
         overflow: hidden;
         transition: 0.6s;
+        margin-bottom: 200px;
+        z-index: 10;
     }
     
     .hello-block {
@@ -369,7 +393,7 @@
     }
     
     .red-span {
-        background-color: #ff5851;
+        background-color: $color-1;
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -382,7 +406,7 @@
     .hello-content {
         position: absolute;
         top: 50%;
-        left: 100px;
+        left: 55%;
         transform: translateY(-50%);
         width: 200px;
         text-align: left;
@@ -405,10 +429,11 @@
         // _________________________zigzag style
         .zigzag {
             position: relative;
+            direction: rtl;
             img {
                 width: 50px;
                 opacity: 0;
-                transition: 0.6s ease-in;
+                transition: 0.5s ease-in;
             }
             p {
                 position: absolute;
@@ -432,29 +457,61 @@
     // ___________________________________slider____________________________
     .main-slider {
         width: 100%;
-        height: 100vh;
-        background-color: $color-2;
+        // height: 100vh;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         // margin-top: calc(100vh + 700px);
+        .slider-navigator {
+            z-index: 1;
+            width: 250px;
+            height: 15px;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            padding: 0;
+            margin: 0;
+            transform: translateX(-50%);
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                width: 23%;
+                height: 100%;
+                @include border(1px, rgb(255, 255, 255));
+            }
+            .slider-navigator-active {
+                background-color: $color-1;
+            }
+        }
         .slider-btn {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
+            width: 8vw;
+            height: 100%;
             position: absolute;
             z-index: 2;
-            top: 50%;
-            background: url("../image/icon/slider-button.png") no-repeat center center/contain;
+            top: 0;
+            color: transparent;
+            outline: none !important;
+            border: none !important;
+            background-color: rgba(255, 255, 255, 0.201);
+            transition: 0.3s;
+            font-size: 20px;
+            font-weight: bold;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.501);
+                color: $color-4;
+            }
         }
         .slider-left {
-            left: 7px;
-            transform: translateY(-50%) rotateY(180deg);
+            left: 0px;
+            clip-path: polygon(0 50%, 70% 20%, 100% 20%, 100% 80%, 70% 80%);
         }
         .slider-right {
-            right: 7px;
-            transform: translateY(-50%);
+            right: 0px;
+            clip-path: polygon(0 20%, 30% 20%, 100% 50%, 30% 80%, 0 80%);
         }
     }
     
@@ -466,13 +523,13 @@
     
     .space-bg {
         width: 100%;
-        height: 50px;
-        background-color: $color-2;
+        height: 100px;
+        background-color: $color-1;
     }
     
     // _________________________________________intro part
     .intro-part {
-        overflow: hidden;
+        // overflow: hidden;
         width: 100%;
         background-color: white;
         @extend .bg-linear-1;
@@ -523,15 +580,16 @@
             }
         }
         .intro-text {
+            text-align: right;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             right: 10px;
             width: 100%;
             height: 320px;
-            background-color: green;
+            background-color: $color-2;
             clip-path: polygon(310px 0, 350px 50%, 310px 100%, 100% 100%, 100% 0);
-            padding-left: 340px;
+            padding-left: 370px;
         }
     }
     
@@ -541,7 +599,6 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding-bottom: 100px;
         .card-container {
             perspective: 300px;
             position: relative;
@@ -605,15 +662,24 @@
     
     .acardion {
         background: white;
-        width: 100%;
+        width: calc(100% - 100px);
         list-style-type: none;
+        margin: 50px 0;
         li {
             text-align: center;
-            background-color: yellow;
+            background-color: $color-1;
+            color: white;
             cursor: pointer;
-            margin: 15px 0;
+            margin: 0 0 15px 0;
             padding: 0 10px 10px 10px;
+            border-radius: 20px 0 20px 0;
             font-size: 2em;
+            transition: 0.3s;
+            &:hover {
+                padding: 0 10px 50px 10px;
+                background: $color-2 url("../image/icon/camera.png") no-repeat 20px center/auto 80%;
+                color: $color-4;
+            }
             div {
                 display: none;
                 background-color: white;
@@ -627,7 +693,12 @@
             }
         }
         .acardion-active {
-            background-color: $color-1;
+            background-color: $color-4;
+            &:hover {
+                padding: 0 10px 10px 10px;
+                background: $color-4;
+                color: white;
+            }
         }
         li:first-child {
             div {
@@ -636,9 +707,39 @@
         }
     }
     
+    // ___________________________________________________________footer
+    .footer {
+        background-color: $color-4;
+        color: white;
+        position: fixed;
+        right: 40px;
+        bottom: 0;
+        height: 200px;
+        width: calc(100% - 80px);
+        z-index: 5;
+        display: none;
+        transition: 0.6s;
+        header {
+            width: 100%;
+            height: 70%;
+        }
+        footer {
+            width: 100%;
+            height: 30%;
+            border-top: 1px solid silver;
+            h3 {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .footer-show {
+        display: block;
+    }
+    
     //___________________________________________________ extended classes_________________________
     .bg-linear-1 {
-        background: linear-gradient(90deg, $color-1, white);
+        background: linear-gradient(90deg, $color-2, $color-1, $color-1, $color-2);
     }
     
     .thumb {

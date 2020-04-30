@@ -41,9 +41,12 @@
 
     <!-- social buttons -->
     <div class="social-container">
-        <img src="image/icon/Facebook.svg" alt="">
-        <img src="image/icon/Instagram.svg" alt="">
-        <img src="image/icon/Twitter.svg" alt="">
+        <figure><img src="image/icon/Facebook.svg" alt=""></figure>
+        <figure><img src="image/icon/Instagram.svg" alt=""></figure>
+        <figure><img src="image/icon/Twitter.svg" alt=""></figure>
+
+
+
     </div>
 
     <!-- scroll-bot-animation -->
@@ -100,8 +103,8 @@
         <!--_____________________________________________ hello block-->
         <div class="hello-block df">
 
-            <div class="hello-right clmn-50">2</div>
-            <div class="hello-left clmn-50">1</div>
+            <div class="hello-right clmn-50"></div>
+            <div class="hello-left clmn-50"></div>
             <div class="hello-text df">
                 <span class="red-span"></span>
                 <div>he </br> llo</div>
@@ -110,8 +113,9 @@
 
                 <!-- ____________________________________zigzag line -->
                 <div class="zigzag">
-                    <img src="image/icon/zigzag.png" alt="">
                     <p class="zigzag-content">zigzag test</p>
+                    <img src="image/icon/zigzag.png" alt="">
+
                 </div>
 
                 <p>Lorem ipsum dolor sit amet.</p>
@@ -146,8 +150,15 @@
 
             <!--_____________________________________________ main slide -->
             <div class="main-slider">
-                <button class="slider-btn slider-left"></button>
-                <button class="slider-btn slider-right"></button>
+                <button class="slider-btn slider-left">PREV</button>
+                <button class="slider-btn slider-right">NEXT</button>
+
+                <ul class="slider-navigator">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
                 <!-- ******************************* -->
                 <div class="slider-container">
 
@@ -352,13 +363,21 @@
                 </ul>
 
             </div>
-
+            <div class="space-bg"></div>
 
 
         </div>
 
     </div>
-
+    <div class="footer">
+        <header></header>
+        <footer>
+            <h3>Powered and Designed by : Amir Mohseni</h3>
+            <h3>
+                GitHub : <a href="#">github.com</a>
+            </h3>
+        </footer>
+    </div>
     <!-- js -->
     <script>
         $(document).scroll(function() {
@@ -374,8 +393,8 @@
                 $(".scroll-bot").addClass('scroll-bot-go');
 
             }
-            if (_h > 700) {
-
+            if (_h > 1100) {
+                $('.footer').addClass('footer-show');
             }
             if (_h < 350) {
                 $('.hello-right').css('width', '50%');
@@ -386,8 +405,8 @@
                 $('.hello-content>p').removeClass('hello-content-go');
                 $(".scroll-bot").removeClass('scroll-bot-go');
             }
-            if (_h < 700) {
-
+            if (_h < 1100) {
+                $('.footer').removeClass('footer-show');
             }
         })
 
@@ -396,9 +415,11 @@
         $(".menu-btn-container").hover(function() {
             $(".hello-block").addClass('hello-width');
             $(".inside-wrapper").addClass('hello-width');
+            $(".footer").addClass('hello-width');
         }, function() {
             $(".hello-block").removeClass('hello-width');
             $(".inside-wrapper").removeClass('hello-width');
+            $(".footer").removeClass('hello-width');
         });
 
         var menuCounter = 1;
@@ -432,6 +453,7 @@
 
         findNextSlider();
 
+
         $('.slider-right').click(function() {
             findNextSlider();
         })
@@ -444,6 +466,9 @@
 
                 $('.slide-content').removeClass('slide-content-move');
                 $('.slide-content').eq(countSlide).addClass('slide-content-move');
+
+                $('.slider-navigator>li').removeClass('slider-navigator-active');
+                $('.slider-navigator>li').eq(countSlide).addClass('slider-navigator-active');
                 countSlide++;
             } else if (countSlide == __l) //make counter 0 to start over dynamically
             {
