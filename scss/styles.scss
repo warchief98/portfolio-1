@@ -1,7 +1,15 @@
     @import "colors";
     @import "mixin";
+    @font-face {
+        font-family: samim;
+        src: url('../font/Samim.woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
     body {
         background-color: $color-1 !important;
+        font-family: samim !important;
     }
     
     .menu-btn-container {
@@ -131,7 +139,8 @@
         z-index: 1000;
         display: flex;
         flex-flow: column nowrap;
-        figure {
+        a {
+            cursor: pointer;
             margin: 0;
             width: 30px;
             height: 30px;
@@ -216,7 +225,6 @@
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-evenly;
-                @include border(1px, black);
                 .side-link-container {
                     .side-link {
                         overflow: hidden;
@@ -360,7 +368,6 @@
         width: calc(100% - 80px);
         height: calc(100vh - 80px);
         overflow-x: hidden;
-        @include border(1px, black);
         .hello-left {
             // background-color: $color-1;
             background: url(../image/asset/1.jpg) no-repeat center center/cover;
@@ -481,7 +488,8 @@
             li {
                 width: 23%;
                 height: 100%;
-                @include border(1px, rgb(255, 255, 255));
+                @include border(1px,
+                rgb(255, 255, 255));
             }
             .slider-navigator-active {
                 background-color: $color-1;
@@ -590,6 +598,9 @@
             background-color: $color-2;
             clip-path: polygon(310px 0, 350px 50%, 310px 100%, 100% 100%, 100% 0);
             padding-left: 370px;
+            p {
+                direction: rtl;
+            }
         }
     }
     
@@ -682,7 +693,8 @@
             }
             div {
                 display: none;
-                background-color: white;
+                background-color: $color-2;
+                border-radius: 20px 0 20px 0;
                 // margin: 0 10px 10px 10px;
                 div {
                     display: flex !important;
@@ -722,11 +734,51 @@
         header {
             width: 100%;
             height: 70%;
+            .footer-links {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                direction: rtl;
+                li {
+                    width: max-content;
+                    padding: 5px 25px;
+                    margin: 0 10px;
+                    @include border(1px,
+                    white);
+                    border-radius: 4px;
+                    position: relative;
+                    cursor: pointer;
+                    &:hover::after {
+                        height: 100%;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        transition: 0.2s;
+                        width: 100%;
+                        height: 0;
+                        top: 0;
+                        left: 0;
+                        background-image: linear-gradient( transparent, rgba(255, 255, 255, 0.301));
+                    }
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
         footer {
             width: 100%;
             height: 30%;
             border-top: 1px solid silver;
+            text-align: center;
             h3 {
                 font-size: 14px;
             }
@@ -738,6 +790,53 @@
     }
     
     //___________________________________________________ extended classes_________________________
+    .more-info-1 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        @include border(4px,
+        $color-4);
+        border-radius: 4px;
+        transform-origin: center;
+        transform: scale(0) translate(-50%, -50%);
+        width: 60vw;
+        min-width: 300px;
+        height: 70vh;
+        min-height: 400px;
+        padding: 10px 15px;
+        text-align: right;
+        direction: rtl;
+        z-index: 1001;
+        background-color: $color-2;
+        opacity: 0;
+        transition: 0.5s;
+        .close-btn-1 {
+            position: fixed;
+            top: -35px;
+            left: 50px;
+            padding: 5px;
+        }
+        div {
+            overflow-y: scroll;
+            height: 100%;
+        }
+        ul {
+            font-size: 16px;
+            font-weight: bold;
+            li {
+                font-weight: normal;
+                list-style-type: circle;
+                list-style-position: inside;
+                padding-right: 15px;
+            }
+        }
+    }
+    
+    .more-info-1-show {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+    
     .bg-linear-1 {
         background: linear-gradient(90deg, $color-2, $color-1, $color-1, $color-2);
     }
@@ -754,5 +853,30 @@
             -moz-transform: scale(1.1);
             -ms-transform: scale(1.1);
             -o-transform: scale(1.1);
+        }
+    }
+    
+    .main-btn {
+        width: max-content;
+        padding: 5px 25px 10px;
+        border-radius: 4px;
+        background-color: #64113F;
+        color: white;
+        border: none !important;
+        outline: none !important;
+        position: relative;
+        &:hover::after {
+            height: 100%;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(255, 255, 255, 0.208);
+            transition: 0.15s;
         }
     }
