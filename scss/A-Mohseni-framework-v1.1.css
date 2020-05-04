@@ -112,6 +112,14 @@ input:active {
     display: flex;
 }
 
+.d-row {
+    flex-direction: row;
+}
+
+.d-col {
+    flex-direction: column;
+}
+
 .al-items-end {
     align-items: flex-end;
 }
