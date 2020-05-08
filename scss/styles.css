@@ -481,16 +481,50 @@ body {
 }
 
 .hello-text {
-  font-size: 100px;
-  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  text-transform: uppercase;
+  text-transform: capitalize;
   -webkit-transition: 0.9s;
   transition: 0.9s;
+}
+
+.hello-text svg {
+  stroke-width: 4px;
+  stroke: #64113F;
+  stroke-dasharray: 40px;
+  -webkit-animation: anime-svg 4s ease-in-out normal infinite;
+          animation: anime-svg 4s ease-in-out normal infinite;
+  height: 120px;
+}
+
+.hello-text svg text {
+  font-size: 80px;
+  text-align: left;
+}
+
+.hello-text svg:nth-of-type(2) {
+  stroke: red;
+}
+
+@-webkit-keyframes anime-svg {
+  from {
+    stroke-dasharray: 40px;
+  }
+  to {
+    stroke-dasharray: 500px;
+  }
+}
+
+@keyframes anime-svg {
+  from {
+    stroke-dasharray: 40px;
+  }
+  to {
+    stroke-dasharray: 500px;
+  }
 }
 
 .red-span {
@@ -539,36 +573,36 @@ body {
 .hello-content .zigzag {
   position: relative;
   direction: rtl;
+  margin-bottom: 20px;
 }
 
 .hello-content .zigzag img {
   width: 50px;
   opacity: 0;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
-  -webkit-transform: translate(149%, 25%);
-          transform: translate(149%, 25%);
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
 }
 
-.hello-content .zigzag p {
+.hello-content .zigzag .zigzag-content {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: -100%;
   width: 100%;
   margin: 0;
   height: 100%;
   line-height: 40px;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   color: transparent;
-  text-align: left;
+  text-align: center;
+  font-weight: bold;
 }
 
 .hello-content .zigzag .zigzag-go {
-  -webkit-transform: translateX(70px);
-          transform: translateX(70px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: black;
 }
 
@@ -1081,6 +1115,7 @@ body {
   transition: 0.15s;
 }
 
+<<<<<<< HEAD
 .hello-block svg {
   stroke-width: 2px;
   stroke: #4C1E4F;
@@ -1107,6 +1142,8 @@ body {
   }
 }
 
+=======
+>>>>>>> 9542554a4c21208b7ef6c0dbae934a3939433c2e
 @media screen and (min-width: 0px) {
   .text-go {
     top: 50%;
@@ -1118,6 +1155,11 @@ body {
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
+    background: rgba(255, 255, 255, 0.397);
+  }
+  .zigzag img {
+    -webkit-transform: translate(150%, 45%);
+            transform: translate(150%, 45%);
   }
   .intro-pic-container {
     display: none;
@@ -1137,6 +1179,18 @@ body {
   }
   .acardion {
     width: calc(100% - 10px);
+  }
+  .fz-20 {
+    font-size: 10px;
+  }
+  .fz-30 {
+    font-size: 12px;
+  }
+  .fz-40 {
+    font-size: 14px;
+  }
+  .fz-50 {
+    font-size: 16px;
   }
 }
 
@@ -1160,6 +1214,7 @@ body {
     left: 55%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    background: none;
   }
   .intro-pic-container {
     display: block;
@@ -1180,6 +1235,52 @@ body {
   }
   .acardion {
     width: calc(100% - 100px);
+  }
+  .fz-20 {
+    font-size: 15px;
+  }
+  .fz-30 {
+    font-size: 16px;
+  }
+  .fz-40 {
+    font-size: 22px;
+  }
+  .fz-50 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fz-20 {
+    font-size: 18px;
+  }
+  .fz-30 {
+    font-size: 24px;
+  }
+  .fz-40 {
+    font-size: 30px;
+  }
+  .fz-50 {
+    font-size: 36px;
+  }
+  .zigzag img {
+    -webkit-transform: translate(150%, 60%);
+            transform: translate(150%, 60%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .fz-20 {
+    font-size: 20px;
+  }
+  .fz-30 {
+    font-size: 30px;
+  }
+  .fz-40 {
+    font-size: 40px;
+  }
+  .fz-50 {
+    font-size: 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

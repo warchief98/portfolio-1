@@ -385,14 +385,34 @@
         }
         
         .hello-text {
-            font-size: 100px;
-            font-weight: bold;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-transform: uppercase;
+            text-transform: capitalize;
             transition: 0.9s;
+            svg {
+                stroke-width: 4px;
+                stroke: $color-4;
+                stroke-dasharray: 40px;
+                animation: anime-svg 4s ease-in-out normal infinite;
+                height: 120px;
+                text {
+                    font-size: 80px;
+                    text-align: left;
+                }
+            }
+            svg:nth-of-type(2) {
+                stroke: red;
+            }
+            @keyframes anime-svg {
+                from {
+                    stroke-dasharray: 40px;
+                }
+                to {
+                    stroke-dasharray: 500px;
+                }
+            }
         }
         
         .red-span {
@@ -431,27 +451,29 @@
             .zigzag {
                 position: relative;
                 direction: rtl;
+                margin-bottom: 20px;
                 img {
                     width: 50px;
                     opacity: 0;
-                    transition: 0.5s ease-in;
-                    transform: translate(149%, 25%);
+                    transition: 0.4s ease-in;
                 }
-                p {
+                .zigzag-content {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    left: -100%;
                     width: 100%;
                     margin: 0;
                     height: 100%;
                     line-height: 40px;
-                    transform: translateX(0px);
                     transition: 0.4s ease-in;
                     color: transparent;
-                    text-align: left;
+                    text-align: center;
+                    font-weight: bold;
                 }
                 .zigzag-go {
-                    transform: translateX(70px);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     color: black;
                 }
             }
@@ -878,22 +900,6 @@
             }
         }
         
-        .hello-block svg {
-            stroke-width: 2px;
-            stroke: $color-4;
-            stroke-dasharray: 0px;
-            animation: anime-svg 4s ease-in-out normal infinite;
-        }
-        
-        @keyframes anime-svg {
-            from {
-                stroke-dasharray: 40px;
-            }
-            to {
-                stroke-dasharray: 250px;
-            }
-        }
-        
         // media responsive
         @media screen and (min-width:0px) {
             .text-go {
@@ -905,6 +911,12 @@
                 top: 50%;
                 left: 50%;
                 transform: translateY(-50%) translateX(-50%);
+                background: rgba(255, 255, 255, 0.397);
+            }
+            .zigzag {
+                img {
+                    transform: translate(150%, 45%);
+                }
             }
             .intro-pic-container {
                 display: none;
@@ -923,6 +935,18 @@
             }
             .acardion {
                 width: calc(100% - 10px);
+            }
+            .fz-20 {
+                font-size: 10px;
+            }
+            .fz-30 {
+                font-size: 12px;
+            }
+            .fz-40 {
+                font-size: 14px;
+            }
+            .fz-50 {
+                font-size: 16px;
             }
         }
         
@@ -947,6 +971,7 @@
                 top: 50%;
                 left: 55%;
                 transform: translateY(-50%);
+                background: none;
             }
             .intro-pic-container {
                 display: block;
@@ -967,10 +992,53 @@
             .acardion {
                 width: calc(100% - 100px);
             }
+            .fz-20 {
+                font-size: 15px;
+            }
+            .fz-30 {
+                font-size: 16px;
+            }
+            .fz-40 {
+                font-size: 22px;
+            }
+            .fz-50 {
+                font-size: 26px;
+            }
         }
         
         // @media screen and (max-width:1023px) {
         // }
-        @media screen and (min-width:1024px) {}
+        @media screen and (min-width:1024px) {
+            .fz-20 {
+                font-size: 18px;
+            }
+            .fz-30 {
+                font-size: 24px;
+            }
+            .fz-40 {
+                font-size: 30px;
+            }
+            .fz-50 {
+                font-size: 36px;
+            }
+            .zigzag {
+                img {
+                    transform: translate(150%, 60%);
+                }
+            }
+        }
         
-        @media screen and (min-width:1440px) {}
+        @media screen and (min-width:1440px) {
+            .fz-20 {
+                font-size: 20px;
+            }
+            .fz-30 {
+                font-size: 30px;
+            }
+            .fz-40 {
+                font-size: 40px;
+            }
+            .fz-50 {
+                font-size: 50px;
+            }
+        }
