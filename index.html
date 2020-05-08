@@ -176,7 +176,7 @@
             <div class="invis-bg"></div>
             <div class="invis-bg"></div>
             <!--_____________________________________________ intro part -->
-            <div class="intro-part p-4">
+            <div class="intro-part box-shadow p-4">
                 <span class="moving-light"></span>
 
 
@@ -201,7 +201,7 @@
             <div class="space-bg"></div>
 
             <!--_____________________________________________ main slide -->
-            <div class="main-slider">
+            <div class="main-slider box-shadow">
                 <button class="slider-btn slider-left">PREV</button>
                 <button class="slider-btn slider-right">NEXT</button>
 
@@ -237,7 +237,7 @@
             <div class="space-bg"></div>
 
             <!--_____________________________________________ cards container -->
-            <div class="cards-block">
+            <div class="cards-block box-shadow">
                 <ul class="acardion">
                     <li class="acardion-active">movie
                         <div>
@@ -453,6 +453,7 @@
             }
             if (_h > 1100) {
                 $('.footer').addClass('footer-show');
+                $('.hello-block').css("opacity", 0);
             }
             if (_h < 350) {
                 $('.hello-right').css('width', '50%');
@@ -465,6 +466,7 @@
             }
             if (_h < 1100) {
                 $('.footer').removeClass('footer-show');
+                $('.hello-block').css("opacity", 1);
             }
         })
 

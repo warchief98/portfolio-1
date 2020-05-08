@@ -348,10 +348,11 @@
         .inside-wrapper {
             position: absolute;
             top: 40px;
-            right: 40px;
+            right: 25px;
+            padding: 0 15px;
             // border-right: 1px solid silver;
             // border-left: 1px solid silver;
-            width: calc(100% - 80px);
+            width: calc(100% - 50px);
             overflow: hidden;
             transition: 0.6s;
             margin-bottom: 200px;
@@ -602,6 +603,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            margin-bottom: 15px;
             .card-container {
                 perspective: 300px;
                 position: relative;
@@ -781,6 +783,10 @@
         }
         
         //___________________________________________________ extended classes_________________________
+        .box-shadow {
+            box-shadow: 0 0 15px 5px $color-box-shadow;
+        }
+        
         .more-info-1 {
             position: fixed;
             top: 50%;
