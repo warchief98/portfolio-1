@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FEE1C7 !important;
+  background-color: #B5A886 !important;
   font-family: samim !important;
 }
 
@@ -407,7 +407,7 @@ body {
 
 .side-menu .menu-red-part .bg-red {
   height: 70vh;
-  background-color: #FEE1C7;
+  background-color: #B5A886;
   opacity: 0;
   width: 500px;
   transition: 1s ease-out;
@@ -471,7 +471,7 @@ body {
 }
 
 .hello-block .hello-right {
-  background-color: #F44174;
+  background-color: #FA7E61;
   -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
@@ -493,7 +493,7 @@ body {
 
 .hello-text svg {
   stroke-width: 4px;
-  stroke: #64113F;
+  stroke: #4C1E4F;
   stroke-dasharray: 40px;
   -webkit-animation: anime-svg 4s ease-in-out normal infinite;
           animation: anime-svg 4s ease-in-out normal infinite;
@@ -528,7 +528,7 @@ body {
 }
 
 .red-span {
-  background-color: #FEE1C7;
+  background-color: #B5A886;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -649,7 +649,7 @@ body {
 }
 
 .main-slider .slider-navigator .slider-navigator-active {
-  background-color: #FEE1C7;
+  background-color: #B5A886;
 }
 
 .main-slider .slider-btn {
@@ -694,7 +694,7 @@ body {
 .space-bg {
   width: 100%;
   height: 100px;
-  background-color: #FEE1C7;
+  background-color: #B5A886;
 }
 
 .intro-part {
@@ -760,7 +760,7 @@ body {
           transform: translateY(-50%);
   right: 10px;
   height: 320px;
-  background-color: #F44174;
+  background-color: #FA7E61;
 }
 
 .intro-part .intro-text p {
@@ -801,7 +801,7 @@ body {
 }
 
 .cards-block .card-container .card {
-  border: 1px solid #FEE1C7;
+  border: 1px solid #B5A886;
   border-radius: 10px;
   position: absolute;
   width: 100%;
@@ -862,7 +862,7 @@ body {
 
 .acardion li {
   text-align: center;
-  background-color: #FEE1C7;
+  background-color: #B5A886;
   color: white;
   cursor: pointer;
   margin: 0 0 15px 0;
@@ -875,13 +875,13 @@ body {
 
 .acardion li:hover {
   padding: 0 10px 50px 10px;
-  background: #F44174 url("../image/icon/camera.png") no-repeat 20px center/auto 80%;
+  background: #FA7E61 url("../image/icon/camera.png") no-repeat 20px center/auto 80%;
   color: #4C1E4F;
 }
 
 .acardion li div {
   display: none;
-  background-color: #F44174;
+  background-color: #FA7E61;
   border-radius: 20px 0 20px 0;
 }
 
@@ -1027,7 +1027,7 @@ body {
   text-align: right;
   direction: rtl;
   z-index: 1001;
-  background-color: #F44174;
+  background-color: #FA7E61;
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1064,8 +1064,8 @@ body {
 }
 
 .bg-linear-1, .intro-part {
-  background: -webkit-gradient(linear, left top, right top, from(#F44174), color-stop(#FEE1C7), color-stop(#FEE1C7), to(#F44174));
-  background: linear-gradient(90deg, #F44174, #FEE1C7, #FEE1C7, #F44174);
+  background: -webkit-gradient(linear, left top, right top, from(#FA7E61), color-stop(#B5A886), color-stop(#B5A886), to(#FA7E61));
+  background: linear-gradient(90deg, #FA7E61, #B5A886, #B5A886, #FA7E61);
 }
 
 .thumb, .intro-part .intro-pic-container .intro-pic {
@@ -1115,35 +1115,6 @@ body {
   transition: 0.15s;
 }
 
-<<<<<<< HEAD
-.hello-block svg {
-  stroke-width: 2px;
-  stroke: #4C1E4F;
-  stroke-dasharray: 0px;
-  -webkit-animation: anime-svg 4s ease-in-out normal infinite;
-          animation: anime-svg 4s ease-in-out normal infinite;
-}
-
-@-webkit-keyframes anime-svg {
-  from {
-    stroke-dasharray: 40px;
-  }
-  to {
-    stroke-dasharray: 250px;
-  }
-}
-
-@keyframes anime-svg {
-  from {
-    stroke-dasharray: 40px;
-  }
-  to {
-    stroke-dasharray: 250px;
-  }
-}
-
-=======
->>>>>>> 9542554a4c21208b7ef6c0dbae934a3939433c2e
 @media screen and (min-width: 0px) {
   .text-go {
     top: 50%;
