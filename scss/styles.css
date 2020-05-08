@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #50514F !important;
+  background-color: #FEE1C7 !important;
   font-family: samim !important;
 }
 
@@ -407,7 +407,7 @@ body {
 
 .side-menu .menu-red-part .bg-red {
   height: 70vh;
-  background-color: #50514F;
+  background-color: #FEE1C7;
   opacity: 0;
   width: 500px;
   transition: 1s ease-out;
@@ -471,7 +471,7 @@ body {
 }
 
 .hello-block .hello-right {
-  background-color: #F7CACD;
+  background-color: #F44174;
   -webkit-transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
   transition: 0.8s cubic-bezier(0.44, -0.16, 0.33, 0.85);
 }
@@ -494,7 +494,7 @@ body {
 }
 
 .red-span {
-  background-color: #50514F;
+  background-color: #FEE1C7;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -615,7 +615,7 @@ body {
 }
 
 .main-slider .slider-navigator .slider-navigator-active {
-  background-color: #50514F;
+  background-color: #FEE1C7;
 }
 
 .main-slider .slider-btn {
@@ -636,7 +636,7 @@ body {
 
 .main-slider .slider-btn:hover {
   background-color: rgba(255, 255, 255, 0.501);
-  color: #64113F;
+  color: #4C1E4F;
 }
 
 .main-slider .slider-left {
@@ -660,7 +660,7 @@ body {
 .space-bg {
   width: 100%;
   height: 100px;
-  background-color: #50514F;
+  background-color: #FEE1C7;
 }
 
 .intro-part {
@@ -726,7 +726,7 @@ body {
           transform: translateY(-50%);
   right: 10px;
   height: 320px;
-  background-color: #F7CACD;
+  background-color: #F44174;
 }
 
 .intro-part .intro-text p {
@@ -767,7 +767,7 @@ body {
 }
 
 .cards-block .card-container .card {
-  border: 1px solid #50514F;
+  border: 1px solid #FEE1C7;
   border-radius: 10px;
   position: absolute;
   width: 100%;
@@ -828,7 +828,7 @@ body {
 
 .acardion li {
   text-align: center;
-  background-color: #50514F;
+  background-color: #FEE1C7;
   color: white;
   cursor: pointer;
   margin: 0 0 15px 0;
@@ -841,13 +841,13 @@ body {
 
 .acardion li:hover {
   padding: 0 10px 50px 10px;
-  background: #F7CACD url("../image/icon/camera.png") no-repeat 20px center/auto 80%;
-  color: #64113F;
+  background: #F44174 url("../image/icon/camera.png") no-repeat 20px center/auto 80%;
+  color: #4C1E4F;
 }
 
 .acardion li div {
   display: none;
-  background-color: #F7CACD;
+  background-color: #F44174;
   border-radius: 20px 0 20px 0;
 }
 
@@ -868,12 +868,12 @@ body {
 }
 
 .acardion .acardion-active {
-  background-color: #64113F;
+  background-color: #4C1E4F;
 }
 
 .acardion .acardion-active:hover {
   padding: 0 10px 10px 10px;
-  background: #64113F;
+  background: #4C1E4F;
   color: white;
 }
 
@@ -882,7 +882,7 @@ body {
 }
 
 .footer {
-  background-color: #64113F;
+  background-color: #4C1E4F;
   color: white;
   position: fixed;
   right: 40px;
@@ -979,7 +979,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  border: 4px solid #64113F;
+  border: 4px solid #4C1E4F;
   border-radius: 4px;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -993,7 +993,7 @@ body {
   text-align: right;
   direction: rtl;
   z-index: 1001;
-  background-color: #F7CACD;
+  background-color: #F44174;
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1030,8 +1030,8 @@ body {
 }
 
 .bg-linear-1, .intro-part {
-  background: -webkit-gradient(linear, left top, right top, from(#F7CACD), color-stop(#50514F), color-stop(#50514F), to(#F7CACD));
-  background: linear-gradient(90deg, #F7CACD, #50514F, #50514F, #F7CACD);
+  background: -webkit-gradient(linear, left top, right top, from(#F44174), color-stop(#FEE1C7), color-stop(#FEE1C7), to(#F44174));
+  background: linear-gradient(90deg, #F44174, #FEE1C7, #FEE1C7, #F44174);
 }
 
 .thumb, .intro-part .intro-pic-container .intro-pic {
@@ -1083,7 +1083,7 @@ body {
 
 .hello-block svg {
   stroke-width: 2px;
-  stroke: #64113F;
+  stroke: #4C1E4F;
   stroke-dasharray: 0px;
   -webkit-animation: anime-svg 4s ease-in-out normal infinite;
           animation: anime-svg 4s ease-in-out normal infinite;
